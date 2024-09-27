@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eDC Campus Ambassador Dashboard</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>eDC Campus Ambassador Program</h1>
+            <div class="user-info">
+                <span>Hey, <!-- Sample Email -->gsanidhya4@gmail.com!</span>
+                <button class="sign-out-btn">Sign out</button>
+            </div>
+        </header>
+
+        <section class="dashboard">
+            <p>Welcome to the Campus Ambassador Dashboard! You can submit tasks and track your points here.</p>
+            <div class="status">
+                <span>Your Points: <!-- Sample Points -->0</span>
+                <span>Your Position: <!-- Sample Position -->1</span>
+            </div>
+            <button class="leaderboard-btn">View Leaderboard</button>
+        </section>
+
+        <section class="tasks-section">
+            <h2>Tasks</h2>
+            <div class="tasks-buttons">
+                <button class="tab-btn" id="pending-btn">Pending Tasks</button>
+                <button class="tab-btn" id="completed-btn">Completed Tasks</button>
+            </div>
+            <div id="cards-container" class="cards-hidden">
+            </div>
+        </section>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
