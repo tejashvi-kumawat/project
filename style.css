@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(218, 211, 211);
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+.user-info {
+    font-size: 0.9rem;
+}
+
+.sign-out-btn {
+    padding: 5px 10px;
+    border: none;
+    background: #ff4c4c;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.sign-out-btn:hover {
+    background-color: #d43f3f;
+}
+
+.dashboard {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.status {
+    margin: 10px 0;
+}
+
+.leaderboard-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.leaderboard-btn:hover {
+    background-color: #0056b3;
+}
+
+.tasks-section {
+    margin-top: 20px;
+}
+
+.tasks-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.tab-btn:hover {
+    background-color: #0056b3;
+}
+
+.cards-hidden {
+    display: none;
+    margin-top: 20px;
+}
+
+.card {
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .tab-btn {
+        padding: 8px 12px;
+        margin: 5px;
+    }
+
+    .leaderboard-btn {
+        padding: 8px 12px;
+    }
+}
