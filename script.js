@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const pendingBtn = document.getElementById('pending-btn');
     const completedBtn = document.getElementById('completed-btn');
     const cardsContainer = document.getElementById('cards-container');
+    const pointsElement = document.getElementById('points');
+    
+    let cardsVisible = false;
+    let currentView = 'none';
 
     const pendingTasks = [
         { title: 'Pending Task 1', description: 'Sample 1' },
@@ -19,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: 'Completed Task 5', description: 'Sample 5' }
     ];
 
+    pointsElement.innerText = completedTasks.length;
+
     function displayCards(tasks) {
         cardsContainer.innerHTML = '';
         tasks.forEach(task => {
@@ -31,10 +37,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     pendingBtn.addEventListener('click', () => {
-        displayCards(pendingTasks);
+        if (currentView === 'pending') {
+            cardsContainer.classList.add('cards-hidden');
+            currentView = 'none';
+        } else {
+            displayCards(pendingTasks);
+            currentView = 'pending';
+        }
     });
 
     completedBtn.addEventListener('click', () => {
-        displayCards(completedTasks);
+        if (currentView === 'completed') {
+            cardsContainer.classList.add('cards-hidden');
+            currentView = 'none';
+        } else {
+            displayCards(completedTasks);
+            currentView = 'completed';
+        }
     });
+
+    const titleText = document.getElementById('title');
+    const title = 'eDC Campus Ambassador Program';
+    let index = 0;
+    
+    titleText.innerText = '';
+
+    function typeWriter() {
+        if (index < title.length) {
+            titleText.innerHTML += title.charAt(index);
+            index++;
+            setTimeout(typeWriter, 100);
+        }
+    }
+
+    typeWriter();
 });
